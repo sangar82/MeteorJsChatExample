@@ -22,9 +22,12 @@ The examples uses:
 - [BootBoxJs](http://bootboxjs.com/ "BootBoxJs")
 
 
-To run this example
+To run this example, clone it and:
 	
 	cd MeteorJsChatExample
 	mrt
+
+You need have Meteor, Meteorite and NodeJs installed.
+
 
 
