@@ -16,7 +16,7 @@ This example is based on:
 
 
 The examples uses:
-- [Meteorite](https://github.com/oortcloud/meteorite "Meteorite").
+- [Meteorite](https://github.com/oortcloud/meteorite "Meteorite")
 - [Twitter Bootstrap](http://twitter.github.com/bootstrap/ "Twitter Bootstrap")
 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/ "Font Awesome")
 - [BootBoxJs](http://bootboxjs.com/ "BootBoxJs")
