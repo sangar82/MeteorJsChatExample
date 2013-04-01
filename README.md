@@ -11,7 +11,7 @@ http://anotherchatexample.meteor.com/
 
 
 This example is based on:
-- [Prototyping with Metor](http://net.tutsplus.com/tutorials/javascript-ajax/prototyping-with-meteor/ "Prototyping with Metor")
+- [Prototyping with Meteor](http://net.tutsplus.com/tutorials/javascript-ajax/prototyping-with-meteor/ "Prototyping with Meteor")
 - [Learn Meteor Fundamentals and Best Practices](http://andrewscala.com/meteor/ "Learn Meteor Fundamentals and Best Practices")
 
 
