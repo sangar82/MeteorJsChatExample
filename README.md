@@ -25,9 +25,15 @@ The examples uses:
 To run this example, clone it and:
 	
 	cd MeteorJsChatExample
-	mrt
+	
+	mrt add router
+	mrt add bootstrap
+	mrt add font-awesome
+	mrt add bootboxjs
 
-You need have Meteor, Meteorite and NodeJs installed.
+	mrt run
+
+You need have NodeJs, Meteor and Meteorite installed.
 
 
 
