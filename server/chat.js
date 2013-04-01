@@ -13,9 +13,9 @@ Meteor.publish("messages", function(id) {
 
 // Methods for BD
 Meteor.methods({
-    create_chat: function(name, members, last_activity) {
+    create_chat: function(name, created_at) {
         console.log("Creating Chat");
-        var chat_id = Rooms.insert({'name': name, 'members': members, 'last_activity': last_activity});
+        var chat_id = Rooms.insert({'name': name, 'created_at': created_at});
         return chat_id;
     },
 

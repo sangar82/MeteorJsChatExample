@@ -26,8 +26,7 @@
         <thead>
           <tr>
             <th>Room Name</th>
-            <th>Members online</th>
-            <th>Last activity</th>
+            <th>Created</th>
             <th>Delete</th>
           </tr>
         </thead>
@@ -35,8 +34,7 @@
           {{#each rooms}}
             <tr>
               <td><a href="/rooms/{{_id}}">{{name}}</a></td>
-              <td>{{members}}</td>
-              <td>{{last_activity}}</td>
+              <td>{{created_at}}</td>
               <td><a href='#' class='delete'>Delete</a></td>
             </tr>
           {{/each}}

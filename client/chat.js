@@ -45,7 +45,7 @@ Template.rooms.createRoom = function () {
 		Meteor.call("exists_chatroom", $msg.val(),  function(error, exists) {
 
 			if (!exists){
-				Meteor.call("create_chat", $msg.val(),0,(new Date()).toUTCString(),  function(error, chat_id) {
+				Meteor.call("create_chat", $msg.val(),(new Date()).toUTCString(),  function(error, chat_id) {
 					$msg.val("");
 					$msg.focus();
 				});
