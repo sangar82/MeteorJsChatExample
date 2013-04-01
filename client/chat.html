@@ -1,0 +1,106 @@
+<head>
+  <title>chat</title>
+</head>
+ 
+<body>
+  <div class="offset1 span9">
+    {{renderPage}}
+  </div>
+</body>
+ 
+<template name="home">
+  <div class="">
+    <h1>Welcome to Meteor Chat</h1>
+    <p>Please a select a room to chat in, or create a new one</p>
+    {{> rooms}}
+  </div>
+
+</template>
+
+
+
+<template name="rooms">
+   
+   {{#if nrooms}}
+      <table id="rooms" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Room Name</th>
+            <th>Members online</th>
+            <th>Last activity</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+          <tbody>
+          {{#each rooms}}
+            <tr>
+              <td><a href="/rooms/{{_id}}">{{name}}</a></td>
+              <td>{{members}}</td>
+              <td>{{last_activity}}</td>
+              <td><a href='#' class='delete'>Delete</a></td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    {{/if}}
+
+    {{#unless nrooms}}
+      <div class="alert alert-info">
+        There aren´t chat rooms. Create one.
+      </div>
+    {{/unless}}
+
+
+    <input type="text" id='name' name="name" placeholder="Enter your chatroom name"></input>
+    <button type="submit"  class="btn btn-primary submit">
+      <i class="icon-plus"></i> Create Room
+    </button>
+  
+</template>
+
+
+
+<template name="room">
+
+    {{#with chat}}
+
+        <h1>Welcome to {{name}}</h1></p>
+
+        {{#if messages}}
+
+          <div id='chat' style="padding:10px;width:600px;height:300px;overflow:auto;border:1px solid #ccc;">
+
+            {{#each messages}}
+                <p><b>{{nick}}:</b>: {{message}}</p>
+                {{ goToDown }}
+            {{/each}}
+
+          </div>
+
+        {{/if}}
+
+        {{#unless messages}}
+          There aren´t messages. Write the first message.
+        {{/unless}}
+
+        <br>
+
+        <input type="text" id='text' name="text"></input>
+
+        <button type="submit" class="btn btn-primary submit">
+        <i class="icon-envelope"></i> Send message
+        </button>
+
+    {{/with}}
+
+    <br><br>
+  
+    <a class="btn btn-success changenick" href="#"><i class="icon-user icon-large"></i> Change nick</a></div>
+  
+    <br><br>
+
+    <a href="/">Go to the list of chats rooms</a>
+
+    {{ goToDown }}
+
+</template>
